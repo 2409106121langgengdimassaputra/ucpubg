@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "192646856525",
+    "project_id": "ucpubg-8cdb8",
+    "storage_bucket": "ucpubg-8cdb8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192646856525:android:1b849c047868cacd15c104",
+        "android_client_info": {
+          "package_name": "com.example.ucpubg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBSzN-J_roFKZ6oth-fmLaUaRSgFiga_U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

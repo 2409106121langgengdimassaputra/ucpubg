@@ -1,0 +1,21 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Sesuai modul: data produk hanya bisa DIBACA user yang sudah login.
+    // (Modul tertulis "request.auth = null" -> itu typo, yang benar "!= null")
+    match /products/{productId} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+
+    // Tambahan: profil & riwayat transaksi milik masing-masing user.
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+
+      match /transactions/{trxId} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+  }
+}
